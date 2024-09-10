@@ -5,10 +5,11 @@ const ContatoSection = styled.section`
   background: yellow;
   width: 100vw;
   height: 100vh;
+  scroll-snap-align: start;
 `;
 
 const Contato = () => {
-  return <ContatoSection>Contato</ContatoSection>;
+  return <ContatoSection id="contato">Contato</ContatoSection>;
 };
 
 export default Contato;

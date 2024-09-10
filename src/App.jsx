@@ -6,7 +6,12 @@ import Contato from "./Components/Contato";
 import styled from "styled-components";
 
 const Container = styled.div`
+  width: 100vw;
+  height: 100vh;
   overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 `;
 
 function App() {

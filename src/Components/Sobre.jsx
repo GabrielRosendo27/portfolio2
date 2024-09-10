@@ -12,6 +12,7 @@ const SobreSection = styled.section`
   justify-content: center;
   padding: 100px;
   gap: 50px;
+  scroll-snap-align: start;
 `;
 const SobreH1 = styled.h1`
   color: white;
@@ -22,7 +23,7 @@ const SobreP = styled.p`
 `;
 const Sobre = () => {
   return (
-    <SobreSection>
+    <SobreSection id="sobre">
       <div>
         <SobreH1>Gabriel Rosendo</SobreH1>
         <SobreP>

@@ -19,32 +19,24 @@ const MenuUl = styled.ul`
 `;
 const MenuLi = styled.li`
   font-size: 22px;
+  cursor: pointer;
 `;
-const MenuA = styled.a`
-  padding: 6px 8px;
-
-  border-radius: 4px;
-`;
-
+const handleScrollToSection = (sectionId) => {
+  const section = document.getElementById(sectionId);
+  section.scrollIntoView({ behavior: "smooth" });
+};
 const Menu = () => {
   return (
     <MenuStyle>
       <MenuUl>
-        <MenuLi>Gabriel Rosendo</MenuLi>
+        <MenuLi onClick={() => handleScrollToSection("sobre")}>Gabriel Rosendo</MenuLi>
       </MenuUl>
       <MenuUl>
-        <MenuLi>
-          <MenuA>Ínicio</MenuA>
-        </MenuLi>
-        <MenuLi>
-          <MenuA>Sobre</MenuA>
-        </MenuLi>
-        <MenuLi>
-          <MenuA>Portfólio</MenuA>
-        </MenuLi>
-        <MenuLi>
-          <MenuA>Contato</MenuA>
-        </MenuLi>
+        <MenuLi onClick={() => handleScrollToSection("sobre")}>Sobre</MenuLi>
+
+        <MenuLi onClick={() => handleScrollToSection("portfolio")}>Portfólio</MenuLi>
+
+        <MenuLi onClick={() => handleScrollToSection("contato")}>Contato</MenuLi>
       </MenuUl>
     </MenuStyle>
   );
