@@ -4,12 +4,13 @@ import styled from "styled-components";
 const MenuStyle = styled.div`
   width: 100vw;
   height: 80px;
+  top: 0;
   position: fixed;
-
   display: flex;
   justify-content: space-around;
   align-items: center;
   gap: 250px;
+  background: green;
 `;
 
 const MenuUl = styled.ul`
