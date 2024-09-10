@@ -15,7 +15,6 @@ const SobreSection = styled.section`
   scroll-snap-align: start;
 `;
 const SobreH1 = styled.h1`
-  color: white;
   font-size: 18px;
 `;
 const SobreP = styled.p`
