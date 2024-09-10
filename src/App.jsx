@@ -9,7 +9,8 @@ const Container = styled.div`
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
-  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 `;

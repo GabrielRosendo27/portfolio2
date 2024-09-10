@@ -21,10 +21,12 @@ const MenuLi = styled.li`
   font-size: 22px;
   cursor: pointer;
 `;
+
 const handleScrollToSection = (sectionId) => {
   const section = document.getElementById(sectionId);
   section.scrollIntoView({ behavior: "smooth" });
 };
+
 const Menu = () => {
   return (
     <MenuStyle>
