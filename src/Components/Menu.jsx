@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const MenuStyle = styled.div`
+  position: relative;
   width: 100vw;
   height: 80px;
   top: 0;
@@ -10,7 +11,7 @@ const MenuStyle = styled.div`
   justify-content: space-around;
   align-items: center;
   gap: 250px;
-  background: green;
+  font-family: Roboto;
 `;
 
 const MenuUl = styled.ul`
@@ -18,8 +19,15 @@ const MenuUl = styled.ul`
   gap: 15px;
 `;
 const MenuLi = styled.li`
-  font-size: 22px;
+  font-size: 20px;
   cursor: pointer;
+  padding: 6px 6px;
+  border-radius: 6px;
+`;
+const DarkModeDiv = styled.div`
+  position: absolute;
+  top: 30px;
+  right: 80px;
 `;
 
 const handleScrollToSection = (sectionId) => {
@@ -40,6 +48,7 @@ const Menu = () => {
 
         <MenuLi onClick={() => handleScrollToSection("contato")}>Contato</MenuLi>
       </MenuUl>
+      <DarkModeDiv>DarkMode</DarkModeDiv>
     </MenuStyle>
   );
 };

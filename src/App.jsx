@@ -13,6 +13,7 @@ const Container = styled.div`
   -ms-overflow-style: none;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+  font-family: Poppins;
 `;
 
 function App() {

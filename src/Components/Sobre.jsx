@@ -5,7 +5,7 @@ const SobreSection = styled.section`
   width: 100vw;
   height: 100vh;
   margin-top: 80px;
-  background: blue;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -26,10 +26,7 @@ const Sobre = () => {
     <SobreSection id="sobre">
       <div>
         <SobreH1>Gabriel Rosendo</SobreH1>
-        <SobreP>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, quos veritatis aliquam assumenda, quibusdam aut in neque dolores maxime rerum eum deserunt
-          similique molestiae sint asperiores at? Laudantium, neque voluptas.
-        </SobreP>
+        <SobreP>Aqui você pode encontrar meus principais projetos, tecnologias que utilizei e o que aprendi com cada um deles.</SobreP>
       </div>
       <div>
         <SobreP>

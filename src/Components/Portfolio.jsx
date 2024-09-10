@@ -4,7 +4,6 @@ import styled from "styled-components";
 const PortfolioSection = styled.section`
   width: 100vw;
   height: 100vh;
-  background-color: red;
   scroll-snap-align: start;
 `;
 
