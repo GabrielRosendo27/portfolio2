@@ -14,6 +14,7 @@ const Container = styled.div`
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   font-family: Poppins;
+  transition: all 0.5s;
   &.dark-mode {
     background-color: black;
     color: white;
