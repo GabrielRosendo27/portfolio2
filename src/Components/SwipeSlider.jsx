@@ -12,7 +12,7 @@ register();
 
 const ImgSlide = styled.img`
   width: 100%;
-  height: 400px;
+  height: 70vh;
   object-fit: cover;
   user-select: none;
   border-radius: 6px;
@@ -32,7 +32,7 @@ const Overlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,7 +54,7 @@ const Description = styled.p`
   font-size: 16px;
 `;
 const SwipeSlider = () => {
-  const [slidePerView, setSlidePerView] = React.useState(3);
+  const [slidePerView, setSlidePerView] = React.useState(2);
 
   const mouseOver = () => {
     console.log("passou");
@@ -65,7 +65,7 @@ const SwipeSlider = () => {
       if (window.innerWidth < 720) {
         setSlidePerView(1);
       } else {
-        setSlidePerView(3);
+        setSlidePerView(2);
       }
     }
     handleResize();
@@ -76,19 +76,19 @@ const SwipeSlider = () => {
   }, []);
 
   const data = [
-    { id: "1", image: "./nat.jpg", title: "Imagem 1", description: "Descrição da imagem 1" },
-    { id: "2", image: "./nat2.jpg", title: "Imagem 2", description: "Descrição da imagem 2" },
-    { id: "3", image: "./nat.jpg", title: "Imagem 3", description: "Descrição da imagem 3" },
-    { id: "4", image: "./nat2.jpg", title: "Imagem 4", description: "Descrição da imagem 4" },
-    { id: "5", image: "./nat.jpg", title: "Imagem 5", description: "Descrição da imagem 5" },
-    { id: "6", image: "./nat2.jpg", title: "Imagem 6", description: "Descrição da imagem 6" },
+    { id: "1", image: "./listafilmesimg.PNG", title: "Imagem 1", description: "Descrição da imagem 1" },
+    { id: "2", image: "./imgBotDisc.PNG", title: "Imagem 2", description: "Descrição da imagem 2" },
+    { id: "3", image: "./exame.PNG", title: "Imagem 3", description: "Descrição da imagem 3" },
+    { id: "4", image: "./telaLogin.PNG", title: "Imagem 4", description: "Descrição da imagem 4" },
+    { id: "5", image: "./jogodavelha.png", title: "Imagem 5", description: "Descrição da imagem 5" },
+    { id: "6", image: "./bikcraft.png", title: "Imagem 6", description: "Descrição da imagem 6" },
   ];
   return (
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={50}
+      spaceBetween={30}
       slidesPerView={slidePerView}
-      // navigation
+      navigation
       pagination={{ clickable: true }}
       // scrollbar={{ draggable: true }}
     >

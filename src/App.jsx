@@ -16,11 +16,11 @@ const Container = styled.div`
   font-family: Poppins;
   transition: all 0.5s;
   &.dark-mode {
-    background-color: black;
+    background-color: #000000f4;
     color: white;
   }
   &.light-mode {
-    background-color: white;
+    background-color: #f8f8f0;
     color: black;
   }
 `;

@@ -28,6 +28,10 @@ const MenuLi = styled.li`
   cursor: pointer;
   padding: 6px 6px;
   border-radius: 6px;
+  &:hover {
+    transition: all 0.2s;
+    opacity: 0.7;
+  }
 `;
 
 const handleScrollToSection = (sectionId) => {

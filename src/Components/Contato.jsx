@@ -13,7 +13,11 @@ const ContatoSection = styled.section`
 const Contato = () => {
   return (
     <>
-      <ContatoSection id="contato">Contato</ContatoSection>
+      <ContatoSection id="contato">
+        Gabriel_eulalio@hotmail.com <br />
+        Linkedin: <br />
+        Github:
+      </ContatoSection>
     </>
   );
 };
