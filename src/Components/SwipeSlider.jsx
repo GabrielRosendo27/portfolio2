@@ -17,7 +17,42 @@ const ImgSlide = styled.img`
   user-select: none;
   border-radius: 6px;
 `;
+const SlideContainer = styled.div`
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
 
+  &:hover .overlay {
+    opacity: 1;
+  }
+`;
+const Overlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: white;
+  padding: 20px;
+  cursor: pointer;
+  user-select: none;
+`;
+const Title = styled.h3`
+  margin: 0;
+  font-size: 24px;
+`;
+
+const Description = styled.p`
+  margin: 10px 0 0;
+  font-size: 16px;
+`;
 const SwipeSlider = () => {
   const [slidePerView, setSlidePerView] = React.useState(3);
 
@@ -41,25 +76,31 @@ const SwipeSlider = () => {
   }, []);
 
   const data = [
-    { id: "1", image: "./nat.jpg" },
-    { id: "2", image: "./nat2.jpg" },
-    { id: "3", image: "./nat.jpg" },
-    { id: "4", image: "./nat2.jpg" },
-    { id: "5", image: "./nat.jpg" },
-    { id: "6", image: "./nat2.jpg" },
+    { id: "1", image: "./nat.jpg", title: "Imagem 1", description: "Descrição da imagem 1" },
+    { id: "2", image: "./nat2.jpg", title: "Imagem 2", description: "Descrição da imagem 2" },
+    { id: "3", image: "./nat.jpg", title: "Imagem 3", description: "Descrição da imagem 3" },
+    { id: "4", image: "./nat2.jpg", title: "Imagem 4", description: "Descrição da imagem 4" },
+    { id: "5", image: "./nat.jpg", title: "Imagem 5", description: "Descrição da imagem 5" },
+    { id: "6", image: "./nat2.jpg", title: "Imagem 6", description: "Descrição da imagem 6" },
   ];
   return (
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={50}
       slidesPerView={slidePerView}
-      navigation
+      // navigation
       pagination={{ clickable: true }}
       // scrollbar={{ draggable: true }}
     >
       {data.map((item) => (
         <SwiperSlide key={item.id}>
-          <ImgSlide src={item.image} alt="Slider" className="slide-item" onMouseOver={mouseOver} />
+          <SlideContainer>
+            <ImgSlide src={item.image} alt="Slider" className="slide-item" onMouseOver={mouseOver} />
+            <Overlay className="overlay">
+              <Title>{item.title}</Title>
+              <Description>{item.description}</Description>
+            </Overlay>
+          </SlideContainer>
         </SwiperSlide>
       ))}
     </Swiper>
