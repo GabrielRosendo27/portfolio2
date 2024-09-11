@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import SwipeSlider from "./SwipeSlider";
 
 const PortfolioSection = styled.section`
   width: 100vw;
@@ -11,7 +12,13 @@ const PortfolioSection = styled.section`
 `;
 
 const Portfolio = () => {
-  return <PortfolioSection id="portfolio">Portfolio</PortfolioSection>;
+  return (
+    <>
+      <PortfolioSection id="portfolio">
+        <SwipeSlider />
+      </PortfolioSection>
+    </>
+  );
 };
 
 export default Portfolio;

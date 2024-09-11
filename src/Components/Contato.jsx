@@ -11,7 +11,11 @@ const ContatoSection = styled.section`
 `;
 
 const Contato = () => {
-  return <ContatoSection id="contato">Contato</ContatoSection>;
+  return (
+    <>
+      <ContatoSection id="contato">Contato</ContatoSection>
+    </>
+  );
 };
 
 export default Contato;
