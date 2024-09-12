@@ -11,6 +11,7 @@ const MenuStyle = styled.div`
   justify-content: space-between;
   align-items: center;
   font-family: Roboto;
+  z-index: 1;
 `;
 
 const MenuUl = styled.ul`

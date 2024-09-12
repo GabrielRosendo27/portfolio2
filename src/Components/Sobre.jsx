@@ -15,6 +15,7 @@ const SobreSection = styled.section`
 const SobreH1 = styled.h1`
   font-size: 5rem;
   position: relative;
+  letter-spacing: 0.05em;
 `;
 const SobreP = styled.p`
   position: absolute;
@@ -22,19 +23,23 @@ const SobreP = styled.p`
   left: 0px;
   font-size: 1.3rem;
   margin-left: 0.6rem;
-  color: black;
 `;
+const DescP = styled.p`
+  font-size: 2rem;
+`;
+
 const Sobre = () => {
   return (
     <SobreSection id="sobre">
-      <div>
+      <div className="box">
         <SobreH1>
           Gabriel Rosendo
           <SobreP>Web Developer</SobreP>
         </SobreH1>
       </div>
-      <div>
-        <p>Aqui você pode encontrar meus principais projetos, tecnologias que utilizei e o que aprendi com cada um deles.</p>
+      <div className="box">
+        <DescP>Bem vindo ao meu Portfólio</DescP>
+        <DescP>Aqui você pode encontrar meus principais projetos, tecnologias que utilizei e o que aprendi com cada um deles.</DescP>
       </div>
     </SobreSection>
   );

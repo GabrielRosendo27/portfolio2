@@ -2,10 +2,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  line-height: 1.6;
 }
+
 ul {
   list-style: none;
 }
-.sw {
+.swiper {
   padding: 40px 30px;
+}
+.box {
+  opacity: 0;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  transform: translateY(20px);
+}
+.box.in-view {
+  opacity: 1;
+  transform: translateY(0);
 }

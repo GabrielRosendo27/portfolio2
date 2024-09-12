@@ -61,6 +61,7 @@ const Title = styled.h3`
 const Description = styled.p`
   font-size: 16px;
   margin: 10px 0px;
+  line-height: 1.8;
 `;
 const Tec = styled.p`
   color: yellow;
@@ -89,7 +90,7 @@ const SwipeSlider = () => {
 
   return (
     <Swiper
-      className="sw"
+      className="swiper box"
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={0}
       slidesPerView={slidePerView}

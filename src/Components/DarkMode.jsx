@@ -7,7 +7,7 @@ const DarkModeDiv = styled.div`
   margin-left: 50px;
   background: black;
   border-radius: 6px;
-  color: white;
+  color: #f8f8f0;
   transition: all 0.5s;
   user-select: none;
   cursor: pointer;
@@ -15,8 +15,8 @@ const DarkModeDiv = styled.div`
     transform: scale(1.08, 1.08);
   }
   &.darkmodebg {
-    background: white;
-    color: black;
+    background: #f8f8f0;
+    color: #000000f4;
   }
 `;
 

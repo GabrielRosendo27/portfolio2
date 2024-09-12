@@ -14,9 +14,11 @@ const Contato = () => {
   return (
     <>
       <ContatoSection id="contato">
-        Gabriel_eulalio@hotmail.com <br />
-        Linkedin: <br />
-        Github:
+        <div className="box">
+          Gabriel_eulalio@hotmail.com <br />
+          Linkedin: <br />
+          Github:
+        </div>
       </ContatoSection>
     </>
   );
