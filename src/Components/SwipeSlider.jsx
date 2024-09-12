@@ -14,16 +14,23 @@ import { data } from "../Data/Data";
 
 const ImgSlide = styled.img`
   width: 100%;
-  height: 70vh;
-  object-fit: cover;
+  height: 200px;
+  object-fit: contain;
   user-select: none;
-  border-radius: 24px;
 `;
 const SlideContainer = styled.div`
-  position: relative;
+  height: 60vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: start;
+  gap: 50px;
   overflow: hidden;
-  border-radius: 4px;
+  border-radius: 24px;
   margin: 0 30px;
+
+  padding: 20px;
+  cursor: pointer;
   &:hover .overlay {
     opacity: 1;
   }
@@ -53,7 +60,7 @@ const Title = styled.h3`
 
 const Description = styled.p`
   font-size: 16px;
-  margin: 10px;
+  margin: 10px 0px;
 `;
 const Tec = styled.p`
   color: yellow;
@@ -93,13 +100,17 @@ const SwipeSlider = () => {
       {data.map((item) => (
         <SwiperSlide key={item.id}>
           <SlideContainer>
-            <ImgSlide src={item.image} alt="Slider" className="slide-item" />
-            <Overlay className="overlay">
+            {/* <Overlay className="overlay"> */}
+            <div>
               <Title>{item.title}</Title>
               <Description>{item.description}</Description>
+            </div>
+            <div>
+              <ImgSlide src={item.image} alt="Slider" className="slide-item" />
               <Tec> {item.tec}</Tec>
               <Git>{item.git}</Git>
-            </Overlay>
+            </div>
+            {/* </Overlay> */}
           </SlideContainer>
         </SwiperSlide>
       ))}
