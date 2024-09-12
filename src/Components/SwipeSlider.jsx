@@ -6,7 +6,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-
 import { register } from "swiper/element/bundle";
 register();
 
@@ -15,13 +14,13 @@ const ImgSlide = styled.img`
   height: 70vh;
   object-fit: cover;
   user-select: none;
-  border-radius: 6px;
+  border-radius: 24px;
 `;
 const SlideContainer = styled.div`
   position: relative;
   overflow: hidden;
-  border-radius: 6px;
-
+  border-radius: 4px;
+  margin: 0 30px;
   &:hover .overlay {
     opacity: 1;
   }
@@ -32,7 +31,7 @@ const Overlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -43,22 +42,25 @@ const Overlay = styled.div`
   padding: 20px;
   cursor: pointer;
   user-select: none;
+  border-radius: 24px;
 `;
 const Title = styled.h3`
-  margin: 0;
   font-size: 24px;
 `;
 
 const Description = styled.p`
-  margin: 10px 0 0;
   font-size: 16px;
+  margin: 10px;
+`;
+const Tec = styled.p`
+  color: yellow;
+  margin-top: 1rem;
+`;
+const Git = styled.p`
+  color: red;
 `;
 const SwipeSlider = () => {
   const [slidePerView, setSlidePerView] = React.useState(2);
-
-  const mouseOver = () => {
-    console.log("passou");
-  };
 
   React.useEffect(() => {
     function handleResize() {
@@ -74,31 +76,81 @@ const SwipeSlider = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
   const data = [
-    { id: "1", image: "./listafilmesimg.PNG", title: "Imagem 1", description: "Descrição da imagem 1" },
-    { id: "2", image: "./imgBotDisc.PNG", title: "Imagem 2", description: "Descrição da imagem 2" },
-    { id: "3", image: "./exame.PNG", title: "Imagem 3", description: "Descrição da imagem 3" },
-    { id: "4", image: "./telaLogin.PNG", title: "Imagem 4", description: "Descrição da imagem 4" },
-    { id: "5", image: "./jogodavelha.png", title: "Imagem 5", description: "Descrição da imagem 5" },
-    { id: "6", image: "./bikcraft.png", title: "Imagem 6", description: "Descrição da imagem 6" },
+    {
+      id: "1",
+      image: "./listafilmesimg.PNG",
+      title: "Lista Filmes App",
+      description:
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi reprehenderit esse quam quasi corrupti aut quis alias amet iure consectetur nesciunt, nobis reiciendis facere mollitia ipsam voluptatibus. Vero, est nihil?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi reprehenderit esse quam quasi corrupti aut quis alias amet iure consectetur nesciunt, nobis reiciendis facere mollitia ipsam voluptatibus. Vero, est nihil?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi reprehenderit esse quam quasi corrupti aut quis alias amet iure consectetur nesciunt, nobis reiciendis facere mollitia ipsam voluptatibus. Vero, est nihil?",
+      tec: "React, Firebase, API",
+      git: "Link Github",
+    },
+    {
+      id: "2",
+      image: "./imgBotDisc.PNG",
+      title: "Discord Bot",
+      description:
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi reprehenderit esse quam quasi corrupti aut quis alias amet iure consectetur nesciunt, nobis reiciendis facere mollitia ipsam voluptatibus. Vero, est nihil?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi reprehenderit esse quam quasi corrupti aut quis alias amet iure consectetur nesciunt, nobis reiciendis facere mollitia ipsam voluptatibus. Vero, est nihil?",
+      tec: "Python, SQLite",
+      git: "Link Github",
+    },
+    {
+      id: "3",
+      image: "./exame.PNG",
+      title: "Exame",
+      description:
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi reprehenderit esse quam quasi corrupti aut quis alias amet iure consectetur nesciunt, nobis reiciendis facere mollitia ipsam voluptatibus. Vero, est nihil?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi reprehenderit esse quam quasi corrupti aut quis alias amet iure consectetur nesciunt, nobis reiciendis facere mollitia ipsam voluptatibus. Vero, est nihil?",
+      tec: "Java",
+      git: "Link Github",
+    },
+    {
+      id: "4",
+      image: "./telaLogin.PNG",
+      title: "Tela de login",
+      description:
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi reprehenderit esse quam quasi corrupti aut quis alias amet iure consectetur nesciunt, nobis reiciendis facere mollitia ipsam voluptatibus. Vero, est nihil?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi reprehenderit esse quam quasi corrupti aut quis alias amet iure consectetur nesciunt, nobis reiciendis facere mollitia ipsam voluptatibus. Vero, est nihil?",
+      tec: "Java, SQL",
+      git: "Link Github",
+    },
+    {
+      id: "5",
+      image: "./jogodavelha.png",
+      title: "Jogo da Velha",
+      description:
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi reprehenderit esse quam quasi corrupti aut quis alias amet iure consectetur nesciunt, nobis reiciendis facere mollitia ipsam voluptatibus. Vero, est nihil?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi reprehenderit esse quam quasi corrupti aut quis alias amet iure consectetur nesciunt, nobis reiciendis facere mollitia ipsam voluptatibus. Vero, est nihil?",
+      tec: "HTML, CSS, JavaScript",
+      git: "Link Github",
+    },
+    {
+      id: "6",
+      image: "./bikcraft.png",
+      title: "Bikcraft",
+      description:
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi reprehenderit esse quam quasi corrupti aut quis alias amet iure consectetur nesciunt, nobis reiciendis facere mollitia ipsam voluptatibus. Vero, est nihil?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi reprehenderit esse quam quasi corrupti aut quis alias amet iure consectetur nesciunt, nobis reiciendis facere mollitia ipsam voluptatibus. Vero, est nihil?",
+      tec: "HTML, CSS",
+      git: "Link Github",
+    },
   ];
   return (
     <Swiper
+      className="sw"
       modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={30}
+      spaceBetween={0}
       slidesPerView={slidePerView}
-      navigation
+      // navigation
       pagination={{ clickable: true }}
       // scrollbar={{ draggable: true }}
     >
       {data.map((item) => (
         <SwiperSlide key={item.id}>
           <SlideContainer>
-            <ImgSlide src={item.image} alt="Slider" className="slide-item" onMouseOver={mouseOver} />
+            <ImgSlide src={item.image} alt="Slider" className="slide-item" />
             <Overlay className="overlay">
               <Title>{item.title}</Title>
               <Description>{item.description}</Description>
+              <Tec> {item.tec}</Tec>
+              <Git>{item.git}</Git>
             </Overlay>
           </SlideContainer>
         </SwiperSlide>
