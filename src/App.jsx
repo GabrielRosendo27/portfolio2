@@ -37,12 +37,13 @@ function App() {
   }, []);
   //
   const [isDarkMode, setIsDarkMode] = React.useState(false);
+
   //
   return (
     <Container className={isDarkMode ? "dark-mode" : "light-mode"}>
       <Menu isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <Sobre />
-      <Portfolio />
+      <Portfolio isDarkMode={isDarkMode} />
       <Contato />
     </Container>
   );

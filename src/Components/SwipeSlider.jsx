@@ -2,8 +2,9 @@ import React from "react";
 import styled from "styled-components";
 //
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Navigation, Pagination, Scrollbar, A11y, EffectCreative } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/effect-creative";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
@@ -20,7 +21,6 @@ const ImgSlide = styled.img`
   object-fit: cover;
   border-radius: 12px;
   user-select: none;
-  border: 4px solid rgba(0, 0, 0, 1);
   padding: 0.2px;
 `;
 const SlideContainer = styled.div`
@@ -32,8 +32,8 @@ const SlideContainer = styled.div`
   overflow: hidden;
   border-radius: 24px;
   margin: 0 30px;
-  border-top: 2px solid rgba(0, 0, 0, 0.2);
-  border-right: 2px solid rgba(0, 0, 0, 0.2);
+  /* border-top: 2px solid rgba(0, 0, 0, 0.2); */
+
   padding: 20px;
   cursor: pointer;
   &:hover .overlay {
@@ -65,7 +65,7 @@ const Tec = styled.p`
 const Git = styled.p`
   color: red;
 `;
-const SwipeSlider = () => {
+const SwipeSlider = ({ isDarkMode }) => {
   // const [slidePerView, setSlidePerView] = React.useState(1);
   // React.useEffect(() => {
   //   function handleResize() {
@@ -84,19 +84,34 @@ const SwipeSlider = () => {
 
   return (
     <Swiper
-      className="swiper box"
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      className={`swiper box ${isDarkMode ? "swiper-dark in-view" : "in-view"}`}
+      modules={[Navigation, Pagination, Scrollbar, A11y, EffectCreative]}
       spaceBetween={0}
       slidesPerView={1}
       // navigation
-      // pagination={{ clickable: true }}
+      pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
+      effect="creative"
+      creativeEffect={{
+        prev: {
+          shadow: true,
+          translate: [0, 0, -400],
+          scale: 0.6, // Diminui o slide anterior
+          opacity: 0, // Faz o slide anterior desaparecer
+        },
+        next: {
+          translate: ["100%", 0, 0], // Faz o próximo slide entrar da direita
+          opacity: 1, // O próximo slide aparece
+        },
+      }}
+      speed={400}
     >
       {data.map((item) => (
         <SwiperSlide key={item.id}>
           <SlideContainer>
             <div>
-              <ImgSlide src={item.image} alt="Slider" className="slide-item" />
+              {/* <ImgSlide src={item.image} alt="Slider" className="slide-item" /> */}
+              <ImgSlide src={item.image} alt="Slider" className={isDarkMode ? "dark-border" : "light-border"} />
             </div>
             <TextDiv>
               <Title>{item.title}</Title>

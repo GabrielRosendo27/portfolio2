@@ -9,8 +9,32 @@ ul {
   list-style: none;
 }
 .swiper {
-  padding: 40px 30px;
+  margin-top: 80px;
+  padding: 10px 20px;
+  --swiper-scrollbar-bg-color: linear-gradient(to right top, #0063cf, #006bd0, #0072d1, #0078d1, #007fd0, #0088d2, #0090d4, #0098d5, #00a4d8, #00b0d7, #00bbd4, #00c6cf);
+  --swiper-scrollbar-drag-bg-color: #000000;
+  --swiper-scrollbar-bottom: 0px;
 }
+.swiper-dark {
+  --swiper-pagination-bullet-inactive-color: #fff;
+  --swiper-pagination-color: linear-gradient(to right top, #cf0000, #d00017, #cf0027, #ce0034, #cb0040, #c80049, #c30053, #be045b, #b70e64, #af176d, #a52074, #9b277b);
+  --swiper-scrollbar-drag-bg-color: linear-gradient(
+    to right top,
+    #cf0000,
+    #d00017,
+    #cf0027,
+    #ce0034,
+    #cb0040,
+    #c80049,
+    #c30053,
+    #be045b,
+    #b70e64,
+    #af176d,
+    #a52074,
+    #9b277b
+  );
+}
+
 .box {
   opacity: 0;
   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
@@ -19,4 +43,10 @@ ul {
 .box.in-view {
   opacity: 1;
   transform: translateY(0);
+}
+.dark-border {
+  border: 3px solid #0063cf;
+}
+.light-border {
+  border: 3px solid rgba(0, 0, 0, 1);
 }

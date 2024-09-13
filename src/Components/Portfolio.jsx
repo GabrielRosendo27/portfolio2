@@ -11,11 +11,11 @@ const PortfolioSection = styled.section`
   align-items: center;
 `;
 
-const Portfolio = () => {
+const Portfolio = ({ isDarkMode }) => {
   return (
     <>
       <PortfolioSection id="portfolio">
-        <SwipeSlider />
+        <SwipeSlider isDarkMode={isDarkMode} />
       </PortfolioSection>
     </>
   );
