@@ -1,7 +1,7 @@
 export const data = [
   {
     id: "1",
-    image: "./listafilmesimg.PNG",
+    image: "./1.png",
     title: "Lista Filmes App",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi reprehenderit esse quam quasi corrupti aut quis alias amet iure consectetur nesciunt, nobis reiciendis facere mollitia ipsam voluptatibus. Vero, est nihil?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi reprehenderit esse quam quasi corrupti aut quis alias amet iure consectetur nesciunt, nobis reiciendis facere mollitia ipsam voluptatibus. Vero, est nihil?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi reprehenderit esse quam quasi corrupti aut quis alias amet iure consectetur nesciunt, nobis reiciendis facere mollitia ipsam voluptatibus. Vero, est nihil?",
@@ -10,16 +10,16 @@ export const data = [
   },
   {
     id: "2",
-    image: "./imgBotDisc.PNG",
+    image: "./botdisc.png",
     title: "Discord Bot",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi reprehenderit esse quam quasi corrupti aut quis alias amet iure consectetur nesciunt, nobis reiciendis facere mollitia ipsam voluptatibus. Vero, est nihil?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi reprehenderit esse quam quasi corrupti aut quis alias amet iure consectetur nesciunt, nobis reiciendis facere mollitia ipsam voluptatibus. Vero, est nihil?",
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi reprehenderit esse quam quasi corrupti aut quis alias amet iure consectetur nesciunt, nobis reiciendis facere mollitia iderit esse quam quasi corrupti aut quis alias amet iure consectetur nesciunt, nobis reiciendis facere mollitia ipsam voluptatibus. Vero, est nihil?",
     tec: "Python, SQLite",
     git: "Link Github",
   },
   {
     id: "3",
-    image: "./exame.PNG",
+    image: "./exame.png",
     title: "Exame",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi reprehenderit esse quam quasi corrupti aut quis alias amet iure consectetur nesciunt, nobis reiciendis facere mollitia ipsam voluptatibus. Vero, est nihil?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi reprehenderit esse quam quasi corrupti aut quis alias amet iure consectetur nesciunt, nobis reiciendis facere mollitia ipsam voluptatibus. Vero, est nihil?",
@@ -28,7 +28,7 @@ export const data = [
   },
   {
     id: "4",
-    image: "./telaLogin.PNG",
+    image: "./telaLogin.png",
     title: "Tela de login",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi reprehenderit esse quam quasi corrupti aut quis alias amet iure consectetur nesciunt, nobis reiciendis facere mollitia ipsam voluptatibus. Vero, est nihil?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi reprehenderit esse quam quasi corrupti aut quis alias amet iure consectetur nesciunt, nobis reiciendis facere mollitia ipsam voluptatibus. Vero, est nihil?",
