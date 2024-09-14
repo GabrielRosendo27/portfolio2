@@ -3,10 +3,33 @@ import styled from "styled-components";
 const ButtonDiv = styled.div`
   display: flex;
   gap: 8px;
+  margin-right: 20px;
 `;
 const Links = styled.a`
-  color: #333;
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: #fff;
+  margin-left: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-image: linear-gradient(to right, #2a272a, #332f34, #3b383e, #434149, #4b4a54);
+  display: flex;
+  align-items: center;
+  &:nth-child(2) {
+    background-image: linear-gradient(to right, #800080, #862985, #8c4189, #91548e, #956792);
+    margin-left: 0;
+  }
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  }
 `;
+
 export const data = [
   {
     id: "1",
@@ -26,12 +49,12 @@ export const data = [
 
     git: (
       <Links href="https://github.com/GabrielRosendo27/ListaFilmesApp" target="_blank" rel="noopener noreferrer">
-        Github Link
+        GITHUB <img src="ExternalLink.svg" />
       </Links>
     ),
     vercel: (
       <Links href="https://lista-filmes-app.vercel.app/" target="_blank" rel="noopener noreferrer">
-        Vercel
+        VERCEL <img src="ExternalLink.svg" />
       </Links>
     ),
   },
@@ -45,8 +68,17 @@ export const data = [
 
     Os dados são salvos no banco SQLite e o bot monitora periodicamente mudanças no status do personagem, como evolução de nível ou morte. 
     Ele também pode remover personagens do banco com o comando !remove *NomeDoPersonagem*. O bot utiliza a biblioteca Selenium para realizar as operações de scraping.`,
-    tec: "Python, SQLite",
-    git: "Link Github",
+    tec: (
+      <ButtonDiv>
+        <PythonButton>Python</PythonButton>
+        <SQLiteButton>SQLite</SQLiteButton>
+      </ButtonDiv>
+    ),
+    git: (
+      <Links href="https://github.com/GabrielRosendo27/ListaFilmesApp" target="_blank" rel="noopener noreferrer">
+        GITHUB <img src="ExternalLink.svg" />
+      </Links>
+    ),
   },
   {
     id: "3",
@@ -59,8 +91,16 @@ export const data = [
     Exame de Triglicerídeos: armazena a quantidade de triglicerídeos com parâmetros específicos para diferentes faixas etárias.
     
     O projeto foi desenvolvido para estudos de Orientação a Objetos em Java.`,
-    tec: "Java",
-    git: "Link Github",
+    tec: (
+      <ButtonDiv>
+        <JavaButton>Java</JavaButton>
+      </ButtonDiv>
+    ),
+    git: (
+      <Links href="https://github.com/GabrielRosendo27/ListaFilmesApp" target="_blank" rel="noopener noreferrer">
+        GITHUB <img src="ExternalLink.svg" />
+      </Links>
+    ),
   },
   {
     id: "4",
@@ -71,8 +111,17 @@ export const data = [
     Os usuários podem criar uma nova conta que será armazenada no banco, ou, caso já possuam uma, fazer login utilizando suas credenciais.
     A interface é intuitiva e desenvolvida com JOptionPane. 
     As informações dos usuários são salvas no banco de dados MySQL.`,
-    tec: "Java, SQL",
-    git: "Link Github",
+    tec: (
+      <ButtonDiv>
+        <JavaButton>Java</JavaButton>
+        <MySQLButton>MySQL</MySQLButton>
+      </ButtonDiv>
+    ),
+    git: (
+      <Links href="https://github.com/GabrielRosendo27/ListaFilmesApp" target="_blank" rel="noopener noreferrer">
+        GITHUB <img src="ExternalLink.svg" />
+      </Links>
+    ),
   },
   {
     id: "5",

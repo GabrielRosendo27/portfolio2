@@ -56,36 +56,16 @@ const Description = styled.p`
   padding: 10px;
   word-break: keep-all;
 `;
-const Tec = styled.p`
-  margin: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: end;
-`;
 const Git = styled.div`
   display: flex;
   gap: 10px;
-  &:a {
-    text-decoration: none;
-  }
+`;
+const ButtonsDiv = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
 const SwipeSlider = ({ isDarkMode }) => {
-  // const [slidePerView, setSlidePerView] = React.useState(1);
-  // React.useEffect(() => {
-  //   function handleResize() {
-  //     if (window.innerWidth < 720) {
-  //       setSlidePerView(1);
-  //     } else {
-  //       setSlidePerView(1);
-  //     }
-  //   }
-  //   handleResize();
-  //   window.addEventListener("resize", handleResize);
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, []);
-
   return (
     <Swiper
       className={`swiper box ${isDarkMode ? "swiper-dark in-view" : "in-view"}`}
@@ -126,10 +106,12 @@ const SwipeSlider = ({ isDarkMode }) => {
                   </span>
                 ))}
               </Description>
-              <Tec> {item.tec}</Tec>
-              <Git>
-                {item.git} {item.vercel}
-              </Git>
+              <ButtonsDiv>
+                <Git>
+                  {item.git} {item.vercel}
+                </Git>
+                <span> {item.tec}</span>
+              </ButtonsDiv>
             </TextDiv>
           </SlideContainer>
         </SwiperSlide>

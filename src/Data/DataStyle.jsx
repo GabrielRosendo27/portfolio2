@@ -25,6 +25,7 @@ const TechButton = styled.button`
 // Botões personalizados com cores específicas para cada tecnologia
 export const ReactButton = styled(TechButton)`
   background-color: #61dbfb; /* Azul React */
+  color: #323330;
 `;
 
 export const JavaScriptButton = styled(TechButton)`
@@ -34,26 +35,31 @@ export const JavaScriptButton = styled(TechButton)`
 
 export const FirebaseButton = styled(TechButton)`
   background-color: #ffca28; /* Amarelo Firebase */
-  color: #333; /* Texto escuro */
+  color: #323330; /* Texto escuro */
 `;
 
 export const JavaButton = styled(TechButton)`
-  background-color: #5382a1; /* Azul Java */
+  background-color: #d3cc6e; /* Azul Java */
+  color: #323330;
 `;
 
 export const PythonButton = styled(TechButton)`
   background-color: #3776ab; /* Azul Python */
+  color: #323330;
 `;
 
 export const MySQLButton = styled(TechButton)`
-  background-color: #00758f; /* Azul mySQL */
+  background-color: #008f64; /* Azul mySQL */
+  color: #323330;
 `;
 
 export const SQLiteButton = styled(TechButton)`
-  background-color: #003b57; /* Azul escuro SQLite */
+  background-color: #018db1; /* Azul escuro SQLite */
+  color: #323330;
 `;
 export const ApiButton = styled(TechButton)`
   background-color: #6e42f4; /* Roxo chamativo para APIs */
+  color: #323330;
 `;
 
 function TechButtons() {
