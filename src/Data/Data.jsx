@@ -1,3 +1,12 @@
+import { ReactButton, JavaScriptButton, FirebaseButton, JavaButton, PythonButton, MySQLButton, SQLiteButton, ApiButton } from "./DataStyle";
+import styled from "styled-components";
+const ButtonDiv = styled.div`
+  display: flex;
+  gap: 8px;
+`;
+const Links = styled.a`
+  color: #333;
+`;
 export const data = [
   {
     id: "1",
@@ -7,16 +16,23 @@ export const data = [
     O sistema busca filmes através de duas APIs: OMDB e TMDB, que se complementam para fornecer informações detalhadas, como título, sinopse, ano, duração, gênero, avaliações no IMDB e Rotten Tomatoes. 
     Os filmes são pesquisados em português ou inglês e os dados são armazenados no Firebase. A funcionalidade inclui a possibilidade de adicionar ou remover filmes da lista, com a exclusão também refletida no banco de dados.
      `,
-    tec: "Tecnologias usadas: React, Firebase, APIs (OMDB e TMDB).",
+    tec: (
+      <ButtonDiv>
+        <ReactButton>React</ReactButton>
+        <FirebaseButton>Firebase</FirebaseButton>
+        <ApiButton>APIs</ApiButton>
+      </ButtonDiv>
+    ),
+
     git: (
-      <a href="https://github.com/GabrielRosendo27/ListaFilmesApp" target="_blank" rel="noopener noreferrer">
+      <Links href="https://github.com/GabrielRosendo27/ListaFilmesApp" target="_blank" rel="noopener noreferrer">
         Github Link
-      </a>
+      </Links>
     ),
     vercel: (
-      <a href="https://lista-filmes-app.vercel.app/" target="_blank" rel="noopener noreferrer">
+      <Links href="https://lista-filmes-app.vercel.app/" target="_blank" rel="noopener noreferrer">
         Vercel
-      </a>
+      </Links>
     ),
   },
   {

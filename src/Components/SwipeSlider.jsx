@@ -57,10 +57,17 @@ const Description = styled.p`
   word-break: keep-all;
 `;
 const Tec = styled.p`
-  margin-top: 0rem;
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
 `;
-const Git = styled.p`
-  margin-top: 0;
+const Git = styled.div`
+  display: flex;
+  gap: 10px;
+  &:a {
+    text-decoration: none;
+  }
 `;
 const SwipeSlider = ({ isDarkMode }) => {
   // const [slidePerView, setSlidePerView] = React.useState(1);
@@ -120,8 +127,9 @@ const SwipeSlider = ({ isDarkMode }) => {
                 ))}
               </Description>
               <Tec> {item.tec}</Tec>
-              <Git>{item.git}</Git>
-              <Git>{item.vercel}</Git>
+              <Git>
+                {item.git} {item.vercel}
+              </Git>
             </TextDiv>
           </SlideContainer>
         </SwiperSlide>
