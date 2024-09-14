@@ -32,8 +32,7 @@ const SlideContainer = styled.div`
   overflow: hidden;
   border-radius: 24px;
   margin: 0 30px;
-  /* border-top: 2px solid rgba(0, 0, 0, 0.2); */
-
+  scroll-behavior: smooth;
   padding: 20px;
   cursor: pointer;
   &:hover .overlay {
@@ -57,6 +56,7 @@ const Description = styled.p`
   word-spacing: 1px;
   letter-spacing: 0.5px;
   padding: 10px;
+  word-break: keep-all;
 `;
 const Tec = styled.p`
   color: blue;
@@ -115,10 +115,17 @@ const SwipeSlider = ({ isDarkMode }) => {
             </div>
             <TextDiv>
               <Title>{item.title}</Title>
-              <Description>{item.description}</Description>
+              <Description>
+                {item.description.split("\n").map((line, index) => (
+                  <span key={index}>
+                    {line}
+                    <br />
+                  </span>
+                ))}
+              </Description>
               <Tec>
                 {" "}
-                {/* {item.tec} */}
+                {item.tec}
                 {/* <IconBxlReact />
                 <IconReact /> */}
               </Tec>
