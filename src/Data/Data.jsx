@@ -6,17 +6,27 @@ export const data = [
     description: `Este projeto é uma aplicação pessoal desenvolvida em React para gerenciar uma lista de filmes. 
     O sistema busca filmes através de duas APIs: OMDB e TMDB, que se complementam para fornecer informações detalhadas, como título, sinopse, ano, duração, gênero, avaliações no IMDB e Rotten Tomatoes. 
     Os filmes são pesquisados em português ou inglês e os dados são armazenados no Firebase. A funcionalidade inclui a possibilidade de adicionar ou remover filmes da lista, com a exclusão também refletida no banco de dados.
-    
-    Tecnologias usadas: React, Firebase, APIs (OMDB e TMDB). `,
-    tec: "React, Firebase, API",
-    git: "Link Github",
+     `,
+    tec: "Tecnologias usadas: React, Firebase, APIs (OMDB e TMDB).",
+    git: (
+      <a href="https://github.com/GabrielRosendo27/ListaFilmesApp" target="_blank" rel="noopener noreferrer">
+        Github Link
+      </a>
+    ),
+    vercel: (
+      <a href="https://lista-filmes-app.vercel.app/" target="_blank" rel="noopener noreferrer">
+        Vercel
+      </a>
+    ),
   },
   {
     id: "2",
     image: "./botdisc.png",
     title: "Discord Bot",
     description: `Este bot de Discord, desenvolvido em Python com Web Scraping, coleta informações de jogadores do jogo Tibia. 
+
     Ao receber o comando !add *NomeDoPersonagem*, o bot faz scraping no site do jogo e retorna as informações do personagem no Discord. 
+
     Os dados são salvos no banco SQLite e o bot monitora periodicamente mudanças no status do personagem, como evolução de nível ou morte. 
     Ele também pode remover personagens do banco com o comando !remove *NomeDoPersonagem*. O bot utiliza a biblioteca Selenium para realizar as operações de scraping.`,
     tec: "Python, SQLite",

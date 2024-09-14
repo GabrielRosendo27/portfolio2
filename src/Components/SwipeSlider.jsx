@@ -11,8 +11,6 @@ import "swiper/css/scrollbar";
 import { register } from "swiper/element/bundle";
 register();
 //
-import IconBxlReact from "../Icons/ReactIcon";
-import IconReact from "../Icons/IconReact";
 import { data } from "../Data/Data";
 
 const ImgSlide = styled.img`
@@ -59,11 +57,10 @@ const Description = styled.p`
   word-break: keep-all;
 `;
 const Tec = styled.p`
-  color: blue;
-  margin-top: 1rem;
+  margin-top: 0rem;
 `;
 const Git = styled.p`
-  color: red;
+  margin-top: 0;
 `;
 const SwipeSlider = ({ isDarkMode }) => {
   // const [slidePerView, setSlidePerView] = React.useState(1);
@@ -110,7 +107,6 @@ const SwipeSlider = ({ isDarkMode }) => {
         <SwiperSlide key={item.id}>
           <SlideContainer>
             <div>
-              {/* <ImgSlide src={item.image} alt="Slider" className="slide-item" /> */}
               <ImgSlide src={item.image} alt="Slider" className={isDarkMode ? "dark-border" : "light-border"} />
             </div>
             <TextDiv>
@@ -123,13 +119,9 @@ const SwipeSlider = ({ isDarkMode }) => {
                   </span>
                 ))}
               </Description>
-              <Tec>
-                {" "}
-                {item.tec}
-                {/* <IconBxlReact />
-                <IconReact /> */}
-              </Tec>
+              <Tec> {item.tec}</Tec>
               <Git>{item.git}</Git>
+              <Git>{item.vercel}</Git>
             </TextDiv>
           </SlideContainer>
         </SwiperSlide>
