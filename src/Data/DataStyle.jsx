@@ -24,7 +24,15 @@ const TechButton = styled.button`
 
 // Botões personalizados com cores específicas para cada tecnologia
 export const ReactButton = styled(TechButton)`
-  background-color: #61dbfb; /* Azul React */
+  background-color: #61dbfb;
+  color: #323330;
+`;
+export const HtmlButton = styled(TechButton)`
+  background-color: #fb9261;
+  color: #323330;
+`;
+export const CSSButton = styled(TechButton)`
+  background-color: #61cafb;
   color: #323330;
 `;
 

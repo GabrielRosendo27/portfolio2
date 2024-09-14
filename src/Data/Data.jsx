@@ -1,4 +1,4 @@
-import { ReactButton, JavaScriptButton, FirebaseButton, JavaButton, PythonButton, MySQLButton, SQLiteButton, ApiButton } from "./DataStyle";
+import { ReactButton, JavaScriptButton, FirebaseButton, JavaButton, PythonButton, MySQLButton, SQLiteButton, ApiButton, HtmlButton, CSSButton } from "./DataStyle";
 import styled from "styled-components";
 const ButtonDiv = styled.div`
   display: flex;
@@ -128,8 +128,18 @@ export const data = [
     image: "./jogodavelha.png",
     title: "Jogo da Velha",
     description: `Jogo da velha clássico, feito principalmente para desenvolver exercícios envolvendo lógica em JavaScript.`,
-    tec: "HTML, CSS, JavaScript",
-    git: "Link Github",
+    tec: (
+      <ButtonDiv>
+        <HtmlButton>HTML</HtmlButton>
+        <CSSButton>CSS</CSSButton>
+        <JavaScriptButton>JavaScript</JavaScriptButton>
+      </ButtonDiv>
+    ),
+    git: (
+      <Links href="https://github.com/GabrielRosendo27/ListaFilmesApp" target="_blank" rel="noopener noreferrer">
+        GITHUB <img src="ExternalLink.svg" />
+      </Links>
+    ),
   },
   {
     id: "6",
@@ -143,9 +153,17 @@ export const data = [
     • Termos
     • Bicicletas 
     • Contato 
-    
     Foi fundamental para consolidar meus conhecimentos nessas tecnologias e em como elas interagem entre si.`,
-    tec: "HTML, CSS",
-    git: "Link Github",
+    tec: (
+      <ButtonDiv>
+        <HtmlButton>HTML</HtmlButton>
+        <CSSButton>CSS</CSSButton>
+      </ButtonDiv>
+    ),
+    git: (
+      <Links href="https://github.com/GabrielRosendo27/ListaFilmesApp" target="_blank" rel="noopener noreferrer">
+        GITHUB <img src="ExternalLink.svg" />
+      </Links>
+    ),
   },
 ];
