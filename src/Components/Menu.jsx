@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import DarkMode from "./DarkMode";
+import IconGithub from "../Icons/IconGithub";
+import IconLinkedin from "../Icons/IconLinkedin";
 
 const MenuStyle = styled.div`
   width: 100vw;
@@ -16,12 +18,26 @@ const MenuStyle = styled.div`
 
 const MenuUl = styled.ul`
   display: flex;
-  gap: 15px;
+  align-items: center;
+  gap: 0px;
   &:nth-child(1) {
-    margin-left: 200px;
+    margin-left: 180px;
   }
   &:nth-child(2) {
     margin-right: 50px;
+    gap: 15px;
+  }
+  a {
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 6px 1.2px;
+    &:nth-child(2) {
+      margin-right: 150px;
+    }
+    &:hover {
+      color: #0063cf;
+      transform: scale(1.1, 1.1);
+    }
   }
 `;
 const MenuLi = styled.li`
@@ -44,6 +60,12 @@ const Menu = ({ isDarkMode, setIsDarkMode }) => {
   return (
     <MenuStyle>
       <MenuUl>
+        <a>
+          <IconGithub width={"24px"} />
+        </a>
+        <a>
+          <IconLinkedin width={"24px"} />
+        </a>
         <MenuLi onClick={() => handleScrollToSection("sobre")}>Gabriel Rosendo</MenuLi>
       </MenuUl>
       <MenuUl>

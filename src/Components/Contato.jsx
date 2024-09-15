@@ -21,12 +21,19 @@ const TextBox = styled.div`
 const IconTextBox = styled.div`
   display: flex;
   gap: 10px;
-
+  transition: all 0.3s;
   span {
     display: flex;
     align-items: center;
-    font-size: 3rem;
+    font-size: 1rem;
     letter-spacing: 4px;
+    gap: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  &:hover {
+    color: #0063cf;
+    transform: scale(1.1, 1.1);
   }
 `;
 const Contato = () => {
@@ -36,24 +43,25 @@ const Contato = () => {
         <div className="box">
           <TextBox>
             <IconTextBox>
-              <IconGithub />
-              <span>
-                <a href="https://github.com/GabrielRosendo27" target="_blank" rel="noopener noreferrer">
-                  GITHUB
-                </a>
-              </span>
+              <a href="https://github.com/GabrielRosendo27" target="_blank" rel="noopener noreferrer">
+                <span>
+                  <IconGithub /> GITHUB
+                </span>
+              </a>
             </IconTextBox>
             <IconTextBox>
-              <IconLinkedin />{" "}
-              <span>
-                {" "}
-                <a href="https://github.com/GabrielRosendo27" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/GabrielRosendo27" target="_blank" rel="noopener noreferrer">
+                <span>
+                  <IconLinkedin />
                   LinkedIn
-                </a>
-              </span>
+                </span>
+              </a>
             </IconTextBox>
             <IconTextBox>
-              <IconEmailOutline /> <span>Gabriel_eulalio@hotmail.com</span>
+              <span>
+                <IconEmailOutline />
+                Gabriel_eulalio@hotmail.com
+              </span>
             </IconTextBox>
           </TextBox>
         </div>
