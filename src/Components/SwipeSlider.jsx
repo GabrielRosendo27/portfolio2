@@ -23,6 +23,9 @@ const ImgSlide = styled.img`
     width: 150px;
     height: 150px;
   }
+  @media (max-width: 765px) {
+    display: none;
+  }
 `;
 const SlideContainer = styled.div`
   display: flex;
@@ -66,10 +69,6 @@ const Description = styled.p`
   }
   @media (max-width: 930px) {
     font-size: 12px;
-  }
-  @media (max-width: 765px) {
-    font-size: 10px;
-    width: 90vw;
   }
 `;
 const Git = styled.div`
