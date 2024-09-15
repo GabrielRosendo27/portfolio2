@@ -11,6 +11,7 @@ const MenuStyle = styled.div`
   position: fixed;
   display: flex;
   justify-content: space-between;
+  flex-wrap: nowrap;
   align-items: center;
   font-family: Roboto;
   z-index: 1;
@@ -22,10 +23,19 @@ const MenuUl = styled.ul`
   gap: 0px;
   &:nth-child(1) {
     margin-left: 180px;
+    @media (max-width: 1400px) {
+      margin-left: 80px;
+    }
+    @media (max-width: 640px) {
+      margin-left: 20px;
+    }
   }
   &:nth-child(2) {
     margin-right: 50px;
     gap: 15px;
+    @media (max-width: 640px) {
+      gap: 5px;
+    }
   }
   a {
     cursor: pointer;
@@ -33,6 +43,12 @@ const MenuUl = styled.ul`
     padding: 6px 1.2px;
     &:nth-child(2) {
       margin-right: 150px;
+      @media (max-width: 1400px) {
+        margin-right: 50px;
+      }
+      @media (max-width: 640px) {
+        margin-right: 0px;
+      }
     }
     &:hover {
       color: #0063cf;
@@ -48,6 +64,11 @@ const MenuLi = styled.li`
   &:hover {
     transition: all 0.2s;
     opacity: 0.7;
+  }
+  @media (max-width: 820px) {
+    span {
+      display: none;
+    }
   }
 `;
 
@@ -66,7 +87,9 @@ const Menu = ({ isDarkMode, setIsDarkMode }) => {
         <a>
           <IconLinkedin width={"24px"} />
         </a>
-        <MenuLi onClick={() => handleScrollToSection("sobre")}>Gabriel Rosendo</MenuLi>
+        <MenuLi onClick={() => handleScrollToSection("sobre")}>
+          <span>Gabriel Rosendo</span>
+        </MenuLi>
       </MenuUl>
       <MenuUl>
         <MenuLi onClick={() => handleScrollToSection("sobre")}>Sobre</MenuLi>

@@ -11,6 +11,9 @@ const DarkModeDiv = styled.div`
   transition: all 0.5s;
   user-select: none;
   cursor: pointer;
+  @media (max-width: 640px) {
+    margin-left: 10px;
+  }
   &:hover {
     transform: scale(1.08, 1.08);
   }
