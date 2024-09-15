@@ -19,12 +19,20 @@ const ImgSlide = styled.img`
   object-fit: cover;
   border-radius: 12px;
   user-select: none;
-  padding: 0.2px;
+  grid-area: image;
+  @media (max-width: 1400px) {
+    width: 300px;
+    height: 470px;
+  }
+  @media (max-width: 1200px) {
+    width: 200px;
+    height: 300px;
+    object-fit: fill;
+  }
 `;
 const SlideContainer = styled.div`
-  height: 60vh;
   display: grid;
-  grid-template-columns: 450px 1fr;
+  grid-template-columns: 420px 800px;
   align-items: start;
   justify-content: center;
   overflow: hidden;
@@ -36,12 +44,21 @@ const SlideContainer = styled.div`
   &:hover .overlay {
     opacity: 1;
   }
+  @media (max-width: 1400px) {
+    grid-template-columns: 320px 1fr;
+  }
+  /* @media (max-width: 1200px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    text-align: center;
+  } */
 `;
 
 const Title = styled.h3`
   font-size: 24px;
   padding: 10px;
-  text-align: center;
+  text-align: start;
 `;
 const TextDiv = styled.div`
   height: 500px;
@@ -64,7 +81,7 @@ const ButtonsDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 4rem;
+  margin-top: 1rem;
 `;
 const SwipeSlider = ({ isDarkMode }) => {
   return (

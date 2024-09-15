@@ -63,9 +63,7 @@ export const data = [
     image: "./botdisc.png",
     title: "Discord Bot",
     description: `Este bot de Discord, desenvolvido em Python com Web Scraping, coleta informações de jogadores do jogo Tibia. 
-
     Ao receber o comando !add *NomeDoPersonagem*, o bot faz scraping no site do jogo e retorna as informações do personagem no Discord. 
-
     Os dados são salvos no banco SQLite e o bot monitora periodicamente mudanças no status do personagem, como evolução de nível ou morte. 
     Ele também pode remover personagens do banco com o comando !remove *NomeDoPersonagem*. O bot utiliza a biblioteca Selenium para realizar as operações de scraping.`,
     tec: (
@@ -85,11 +83,9 @@ export const data = [
     image: "./exame.png",
     title: "Exame",
     description: `Este programa monitora três tipos de exames: glicemia, colesterol e triglicerídeos, armazenando dados como nome do paciente, tipo sanguíneo e ano de nascimento.
-
     Exame de Glicemia: armazena a quantidade de glicose e classifica como normoglicemia, pré-diabetes ou diabetes, conforme os níveis de glicose.
     Exame de Colesterol: armazena LDL, HDL e o risco do paciente (baixo, médio, alto), com metas para cada faixa etária e nível de risco.
     Exame de Triglicerídeos: armazena a quantidade de triglicerídeos com parâmetros específicos para diferentes faixas etárias.
-    
     O projeto foi desenvolvido para estudos de Orientação a Objetos em Java.`,
     tec: (
       <ButtonDiv>
