@@ -9,7 +9,6 @@ const Links = styled.a`
   text-decoration: none;
   letter-spacing: 2px;
   color: #fff;
-  margin-left: 20px;
   padding: 10px 20px;
   border: none;
   border-radius: 4px;

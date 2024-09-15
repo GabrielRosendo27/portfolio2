@@ -14,74 +14,85 @@ register();
 import { data } from "../Data/Data";
 
 const ImgSlide = styled.img`
-  width: 390px;
-  height: 510px;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
   border-radius: 12px;
   user-select: none;
-  grid-area: image;
-  @media (max-width: 1400px) {
-    width: 300px;
-    height: 470px;
-  }
-  @media (max-width: 1200px) {
-    width: 200px;
-    height: 300px;
-    object-fit: fill;
+  @media (max-width: 930px) {
+    width: 150px;
+    height: 150px;
   }
 `;
 const SlideContainer = styled.div`
-  display: grid;
-  grid-template-columns: 420px 800px;
+  display: flex;
   align-items: start;
   justify-content: center;
-  overflow: hidden;
-  border-radius: 24px;
+  gap: 10px;
   margin: 0 30px;
-  scroll-behavior: smooth;
-  padding: 20px;
   cursor: pointer;
-  &:hover .overlay {
-    opacity: 1;
+  margin-bottom: 30px;
+  @media (max-width: 930px) {
+    p {
+      width: 600px;
+    }
   }
-  @media (max-width: 1400px) {
-    grid-template-columns: 320px 1fr;
+  @media (max-width: 765px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
   }
-  /* @media (max-width: 1200px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    justify-items: center;
-    text-align: center;
-  } */
 `;
 
-const Title = styled.h3`
+const Title = styled.h2`
   font-size: 24px;
   padding: 10px;
   text-align: start;
 `;
-const TextDiv = styled.div`
-  height: 500px;
-  overflow: hidden;
-`;
+const TextDiv = styled.div``;
 const Description = styled.p`
+  width: 1100px;
   font-size: 16px;
-  line-height: 2;
-  word-break: break-all;
+  line-height: 1.8;
+  word-break: keep-all;
   word-spacing: 1px;
   letter-spacing: 0.5px;
   padding: 10px;
-  word-break: keep-all;
+  @media (max-width: 1400px) {
+    width: 900px;
+  }
+  @media (max-width: 1200px) {
+    width: 600px;
+  }
+  @media (max-width: 930px) {
+    font-size: 12px;
+  }
+  @media (max-width: 765px) {
+    font-size: 10px;
+    width: 90vw;
+  }
 `;
 const Git = styled.div`
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
+  @media (max-width: 930px) {
+    flex-wrap: wrap;
+  }
 `;
 const ButtonsDiv = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-top: 1rem;
+  justify-content: end;
+  margin-top: 0rem;
+`;
+const ImgGitDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 `;
 const SwipeSlider = ({ isDarkMode }) => {
   return (
@@ -111,9 +122,12 @@ const SwipeSlider = ({ isDarkMode }) => {
       {data.map((item) => (
         <SwiperSlide key={item.id}>
           <SlideContainer>
-            <div>
+            <ImgGitDiv>
               <ImgSlide src={item.image} alt="Slider" className={isDarkMode ? "dark-border" : "light-border"} />
-            </div>
+              <Git>
+                {item.git} {item.vercel}
+              </Git>
+            </ImgGitDiv>
             <TextDiv>
               <Title>{item.title}</Title>
               <Description>
@@ -125,9 +139,6 @@ const SwipeSlider = ({ isDarkMode }) => {
                 ))}
               </Description>
               <ButtonsDiv>
-                <Git>
-                  {item.git} {item.vercel}
-                </Git>
                 <span> {item.tec}</span>
               </ButtonsDiv>
             </TextDiv>

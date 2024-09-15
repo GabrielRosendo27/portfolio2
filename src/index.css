@@ -12,6 +12,7 @@ ul {
   list-style: none;
 }
 .swiper {
+  margin-top: 80px;
   --swiper-scrollbar-bg-color: linear-gradient(to right top, #0063cf, #006bd0, #0072d1, #0078d1, #007fd0, #0088d2, #0090d4, #0098d5, #00a4d8, #00b0d7, #00bbd4, #00c6cf);
   --swiper-scrollbar-drag-bg-color: #000000;
   --swiper-scrollbar-bottom: 0px;
