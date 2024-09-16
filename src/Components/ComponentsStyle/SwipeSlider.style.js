@@ -2,16 +2,18 @@ import styled from "styled-components";
 //
 
 export const ImgSlide = styled.img`
-  width: 30vw;
-  height: 50vh;
+  width: 20vw;
+  height: 60vh;
   object-fit: cover;
   border-radius: 12px;
   user-select: none;
-  @media (max-width: 992px) {
-    width: 20vw;
-    height: 20vh;
+  @media (max-width: 1369px) {
+    width: 22vw;
   }
-  @media (max-width: 576px) {
+  @media (max-width: 1151px) {
+    width: 28vw;
+  }
+  @media (max-width: 968px) {
     display: none;
   }
 `;
@@ -22,11 +24,9 @@ export const SlideContainer = styled.div`
   justify-content: center;
   gap: 10px;
   cursor: pointer;
-  @media (max-width: 992px) {
+  @media (max-width: 968px) {
     flex-direction: column;
     align-items: center;
-  }
-  @media (max-width: 576px) {
     margin: 30px 10px;
   }
 `;
@@ -47,9 +47,11 @@ export const Description = styled.p`
   word-spacing: 1px;
   letter-spacing: 0.5px;
   padding: 10px;
+  @media (max-width: 968px) {
+    font-size: 14px;
+  }
   @media (max-width: 576px) {
     font-size: 12px;
-    line-height: 1;
   }
 `;
 export const Git = styled.div`
