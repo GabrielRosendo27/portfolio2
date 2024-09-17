@@ -72,7 +72,7 @@ export const data = [
       </ButtonDiv>
     ),
     git: (
-      <Links href="https://github.com/GabrielRosendo27/ListaFilmesApp" target="_blank" rel="noopener noreferrer">
+      <Links href="https://github.com/GabrielRosendo27/botDisc" target="_blank" rel="noopener noreferrer">
         GITHUB <img src="ExternalLink.svg" />
       </Links>
     ),
@@ -92,7 +92,7 @@ export const data = [
       </ButtonDiv>
     ),
     git: (
-      <Links href="https://github.com/GabrielRosendo27/ListaFilmesApp" target="_blank" rel="noopener noreferrer">
+      <Links href="https://github.com/GabrielRosendo27/Exame-Java" target="_blank" rel="noopener noreferrer">
         GITHUB <img src="ExternalLink.svg" />
       </Links>
     ),
@@ -113,7 +113,7 @@ export const data = [
       </ButtonDiv>
     ),
     git: (
-      <Links href="https://github.com/GabrielRosendo27/ListaFilmesApp" target="_blank" rel="noopener noreferrer">
+      <Links href="https://github.com/GabrielRosendo27/TelaLogin" target="_blank" rel="noopener noreferrer">
         GITHUB <img src="ExternalLink.svg" />
       </Links>
     ),
@@ -131,8 +131,13 @@ export const data = [
       </ButtonDiv>
     ),
     git: (
-      <Links href="https://github.com/GabrielRosendo27/ListaFilmesApp" target="_blank" rel="noopener noreferrer">
+      <Links href="https://github.com/GabrielRosendo27/jogodavelha" target="_blank" rel="noopener noreferrer">
         GITHUB <img src="ExternalLink.svg" />
+      </Links>
+    ),
+    vercel: (
+      <Links href="https://jogodavelha-eta.vercel.app/" target="_blank" rel="noopener noreferrer">
+        VERCEL <img src="ExternalLink.svg" />
       </Links>
     ),
   },
@@ -156,8 +161,13 @@ export const data = [
       </ButtonDiv>
     ),
     git: (
-      <Links href="https://github.com/GabrielRosendo27/ListaFilmesApp" target="_blank" rel="noopener noreferrer">
+      <Links href="https://github.com/GabrielRosendo27/projetobikcraft" target="_blank" rel="noopener noreferrer">
         GITHUB <img src="ExternalLink.svg" />
+      </Links>
+    ),
+    vercel: (
+      <Links href="https://bikcraft-pi-opal.vercel.app/" target="_blank" rel="noopener noreferrer">
+        VERCEL <img src="ExternalLink.svg" />
       </Links>
     ),
   },
