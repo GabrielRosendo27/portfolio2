@@ -99,7 +99,7 @@ export const data = [
   },
   {
     id: "4",
-    image: "./telaLogin.png",
+    image: "./telalog.png",
     title: "Tela de login",
     description: `Esta aplicação Java apresenta uma Tela de Login e Cadastro com integração ao banco de dados MySQL. 
       
