@@ -79,7 +79,7 @@ export const data = [
   },
   {
     id: "3",
-    image: "./exame.png",
+    image: "./imgexame.png",
     title: "Exame",
     description: `Este programa monitora três tipos de exames: glicemia, colesterol e triglicerídeos, armazenando dados como nome do paciente, tipo sanguíneo e ano de nascimento.
     Exame de Glicemia: armazena a quantidade de glicose e classifica como normoglicemia, pré-diabetes ou diabetes, conforme os níveis de glicose.
