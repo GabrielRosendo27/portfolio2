@@ -59,7 +59,12 @@ export const Git = styled.div`
   align-items: center;
   justify-content: center;
   gap: 10px;
+  padding-bottom: 20px;
+  @media (max-width: 968px) {
+    padding-bottom: initial;
+  }
 `;
+
 export const ButtonsDiv = styled.div`
   display: flex;
   align-items: center;
