@@ -13,10 +13,10 @@ const Menu = ({ isDarkMode, setIsDarkMode }) => {
   return (
     <MenuStyle>
       <MenuUl>
-        <a>
+        <a href="https://github.com/gabrielrosendo27" target="_blank">
           <IconGithub width={"24px"} />
         </a>
-        <a>
+        <a href="https://www.linkedin.com/in/gabriel-rosendo-a9252b207/" target="_blank">
           <IconLinkedin width={"24px"} />
         </a>
         <MenuLi onClick={() => handleScrollToSection("sobre")}>

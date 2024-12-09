@@ -18,7 +18,7 @@ const Contato = () => {
               </a>
             </IconTextBox>
             <IconTextBox>
-              <a href="https://github.com/GabrielRosendo27" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/gabriel-rosendo-a9252b207/" target="_blank" rel="noopener noreferrer">
                 <span>
                   <IconLinkedin />
                   LinkedIn
